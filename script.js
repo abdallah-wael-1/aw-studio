@@ -1,9 +1,7 @@
-// ==================== INITIALIZE LUCIDE ICONS ====================
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 });
 
-// ==================== NAVBAR SCROLL EFFECT ====================
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -16,7 +14,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ==================== MOBILE MENU TOGGLE ====================
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -24,14 +21,12 @@ mobileMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
 });
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll("#mobile-menu a").forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
   });
 });
 
-// ==================== SCROLL INDICATOR ====================
 const scroller = document.getElementById("scroller");
 
 if (scroller) {
@@ -42,7 +37,6 @@ if (scroller) {
   });
 }
 
-// ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
@@ -65,7 +59,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ==================== PROJECT FILTERING ====================
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -73,11 +66,9 @@ filterButtons.forEach((button) => {
   button.addEventListener("click", function () {
     const filterValue = this.getAttribute("data-filter");
 
-    // Update active button
     filterButtons.forEach((btn) => btn.classList.remove("active"));
     this.classList.add("active");
 
-    // Filter projects with fade animation
     projectCards.forEach((card) => {
       const category = card.getAttribute("data-category");
 
@@ -98,12 +89,10 @@ filterButtons.forEach((button) => {
   });
 });
 
-// Set initial state for project cards
 projectCards.forEach((card) => {
   card.style.transition = "opacity 0.3s ease, transform 0.3s ease";
 });
 
-// ==================== ACTIVE NAVIGATION LINK ====================
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -134,7 +123,6 @@ function setActiveLink() {
 
 window.addEventListener("scroll", setActiveLink);
 
-// ==================== FORM SUBMISSION ====================
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
@@ -144,7 +132,6 @@ if (contactForm) {
     const submitBtn = contactForm.querySelector(".form-submit");
     const originalText = submitBtn.innerHTML;
 
-    // Change button text
     submitBtn.innerHTML = `
       <i data-lucide="check-circle"></i>
       <span>Message Sent!</span>
@@ -152,10 +139,8 @@ if (contactForm) {
     submitBtn.style.background = "linear-gradient(to right, #10b981, #059669)";
     submitBtn.disabled = true;
 
-    // Reinitialize lucide icons
     lucide.createIcons();
 
-    // Reset form
     setTimeout(() => {
       contactForm.reset();
       submitBtn.innerHTML = originalText;
@@ -167,7 +152,6 @@ if (contactForm) {
   });
 }
 
-// ==================== CONSOLE MESSAGE ====================
 console.log(
   "%c🚀 AW Studio",
   "font-size: 20px; font-weight: bold; color: #38BDF8;"
