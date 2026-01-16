@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./images/background/logo.jpeg"
+    />
+    <meta property="og:title" content="AW Studio | Graphics • Web • UI/UX" />
+    <meta property="og:image" content="./images/background/logo.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="AW Studio crafts stunning graphics, modern websites, and intuitive UI/UX experiences. Discover creative design solutions and high-quality digital work."
+    />
+
+    <title>AW Studio | Graphics • Web • UI/UX</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      const originalTitle = document.title;
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          document.title = "Return To Website 👋 ";
+        } else {
+          document.title = originalTitle;
+        }
+      });
+    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              primary: "#38BDF8",
+              secondary: "#7C3AED",
+              dark: "#0B1020",
+              purple: "#A855F7",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8"
+      >
+        <!-- Logo -->
+        <a href="" class="flex items-center gap-2">
+          <img
+            src="./images/background/logo.jpeg"
+            class="h-[60px] w-[60px] rounded-full ring-2 ring-primary/30 hover:ring-primary/60 transition-all duration-300"
+            alt="AW Logo"
+          />
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <div class="flex gap-8">
+            <a href="#about" class="nav-link">
+              <i data-lucide="user" class="w-4 h-4 inline mr-1"></i>
+              About
+              <span class="nav-underline"></span>
+            </a>
+            <a href="#skills" class="nav-link">
+              <i data-lucide="zap" class="w-4 h-4 inline mr-1"></i>
+              Skills
+              <span class="nav-underline"></span>
+            </a>
+            <a href="#projects" class="nav-link">
+              <i data-lucide="briefcase" class="w-4 h-4 inline mr-1"></i>
+              Projects
+              <span class="nav-underline"></span>
+            </a>
+            <a href="#contact" class="nav-link">
+              <i data-lucide="mail" class="w-4 h-4 inline mr-1"></i>
+              Contact
+              <span class="nav-underline"></span>
+            </a>
+          </div>
+
+          <a href="#contact" class="hire-btn">Hire Me</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 text-white focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="px-6 py-6 space-y-4 text-gray-400">
+          <a href="#about" class="mobile-link">
+            <i data-lucide="user" class="w-4 h-4 inline mr-2"></i>
+            About
+          </a>
+          <a href="#skills" class="mobile-link">
+            <i data-lucide="zap" class="w-4 h-4 inline mr-2"></i>
+            Skills
+          </a>
+          <a href="#projects" class="mobile-link">
+            <i data-lucide="briefcase" class="w-4 h-4 inline mr-2"></i>
+            Projects
+          </a>
+          <a href="#contact" class="mobile-link">
+            <i data-lucide="mail" class="w-4 h-4 inline mr-2"></i>
+            Contact
+          </a>
+          <a href="#contact" class="hire-btn-mobile">Hire Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="section-full">
+      <div class="section-content">
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="badge"> Available for freelance work</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="hero-title">
+          <span class="text-gradient">AW Studio</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="hero-subtitle">Graphics • Web • UI/UX</h2>
+
+        <!-- Description -->
+        <p class="hero-description">
+          I craft beautiful digital experiences through UI/UX design, graphic
+          design, and frontend development. Let's bring your ideas to life.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a
+            href="https://github.com/abdallah-wael-1"
+            target="_blank"
+            class="social-icon"
+          >
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abdallah-wael-56a215357/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/share/1KLjoWa8b2/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/aw_studio1?igsh=eDIzNGh6OGpxY3R3"
+            target="_blank"
+            class="social-icon"
+          >
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@awstudio88?_r=1&_t=ZS-936TRhWbJ0E"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a
+            href="https://www.behance.net/ahmedwael3816"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fa-brands fa-behance"></i>
+          </a>
+          <a
+            target="_blank"
+            href="mailto:aw805224@gmail.com"
+            class="social-icon"
+          >
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div id="scroller" class="scroll-indicator-wrapper">
+        <div class="scroll-indicator">
+          <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-full">
+      <!-- Animated Title -->
+      <div class="section-content">
+        <div class="section-title-animated">
+          <span>About Us</span>
+        </div>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Left - Stats -->
+            <div class="space-y-8">
+              <div class="stat-card border-primary/20">
+                <div class="stat-number text-gradient">2+</div>
+                <p class="stat-label">Years of Experience</p>
+              </div>
+
+              <div class="stat-card border-secondary/20">
+                <div class="stat-number text-gradient">25+</div>
+                <p class="stat-label">Projects Completed</p>
+              </div>
+            </div>
+
+            <!-- Right - Info -->
+            <div>
+              <h2 class="section-heading">
+                Crafting Digital <span class="text-gradient">Experiences</span>
+              </h2>
+              <p class="section-text">
+                I'm a multidisciplinary designer and developer passionate about
+                creating beautiful, functional digital products. With expertise
+                in UI/UX design, graphic design, and frontend development, I
+                bring a holistic approach to every project.
+              </p>
+              <p class="section-text mb-8">
+                From concept to code, I focus on delivering seamless user
+                experiences that not only look stunning but also drive results.
+                Let's collaborate and turn your vision into reality.
+              </p>
+
+              <div class="skill-tags">
+                <span
+                  class="skill-tag bg-secondary/20 text-secondary border-secondary/30"
+                  >UI/UX Design</span
+                >
+                <span
+                  class="skill-tag bg-purple/20 text-purple border-purple/30"
+                  >Graphic Design</span
+                >
+                <span
+                  class="skill-tag bg-primary/20 text-primary border-primary/30"
+                  >Frontend Dev</span
+                >
+                <span
+                  class="skill-tag bg-purple/20 text-purple border-purple/30"
+                  >Responsive Design</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-full">
+      <!-- Animated Title -->
+
+      <div class="section-content">
+        <div class="section-title-animated">
+          <span>Our Skills</span>
+        </div>
+        <div class="max-w-6xl mx-auto">
+          <!-- Skills Grid -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Graphic Design -->
+            <div class="skill-card hover:border-secondary/40">
+              <div
+                class="skill-icon bg-gradient-to-br from-secondary/20 to-purple/20 text-secondary"
+              >
+                <i data-lucide="palette" class="w-7 h-7 stroke-[1.5]"></i>
+              </div>
+              <div class="skill-content">
+                <h3 class="skill-title">Graphic Design</h3>
+                <p class="skill-description">
+                  Brand identity, illustrations, marketing materials, and visual
+                  storytelling that captures attention.
+                </p>
+                <div class="skill-tools">
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >Photoshop</span
+                  >
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >Illustrator</span
+                  >
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >After Effects</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="skill-card hover:border-primary/40">
+              <div
+                class="skill-icon bg-gradient-to-br from-primary/20 to-secondary/20 text-primary"
+              >
+                <i data-lucide="layout" class="w-7 h-7"></i>
+              </div>
+              <div class="skill-content">
+                <h3 class="skill-title">UI/UX Design</h3>
+                <p class="skill-description">
+                  User-centered design with intuitive interfaces, wireframing,
+                  prototyping, and design systems.
+                </p>
+                <div class="skill-tools">
+                  <span
+                    class="tool-tag bg-primary/10 text-primary border-primary/20"
+                    >Figma</span
+                  >
+                  <span
+                    class="tool-tag bg-primary/10 text-primary border-primary/20"
+                    >Adobe XD</span
+                  >
+                  <span
+                    class="tool-tag bg-primary/10 text-primary border-primary/20"
+                    >Principle</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skill-card hover:border-purple/40">
+              <div
+                class="skill-icon bg-gradient-to-br from-purple/20 to-primary/20 text-purple"
+              >
+                <i data-lucide="code" class="w-7 h-7"></i>
+              </div>
+              <div class="skill-content">
+                <h3 class="skill-title">Frontend Development</h3>
+                <p class="skill-description">
+                  Clean, responsive code that brings designs to life with modern
+                  frameworks and best practices.
+                </p>
+                <div class="skill-tools">
+                  <span
+                    class="tool-tag bg-purple/10 text-purple border-purple/20"
+                    >React</span
+                  >
+                  <span
+                    class="tool-tag bg-purple/10 text-purple border-purple/20"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="tool-tag bg-purple/10 text-purple border-purple/20"
+                    >Tailwind CSS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Motion Design -->
+            <div class="skill-card hover:border-secondary/40">
+              <div
+                class="skill-icon bg-gradient-to-br from-secondary/20 to-primary/20 text-secondary"
+              >
+                <i data-lucide="sparkles" class="w-7 h-7"></i>
+              </div>
+              <div class="skill-content">
+                <h3 class="skill-title">Motion Design</h3>
+                <p class="skill-description">
+                  Engaging animations and micro-interactions that enhance user
+                  experience and delight.
+                </p>
+                <div class="skill-tools">
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >Framer Motion</span
+                  >
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >GSAP</span
+                  >
+                  <span
+                    class="tool-tag bg-secondary/10 text-secondary border-secondary/20"
+                    >Lottie</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-full">
+      <div class="section-content">
+        <!-- Animated Title -->
+        <div class="section-title-animated">
+          <span>Our Projects</span>
+        </div>
+        <div class="max-w-6xl mx-auto">
+          <!-- Category Filter -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="graphic">
+              Graphic Design
+            </button>
+            <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+            <button class="filter-btn" data-filter="web">
+              Web Development
+            </button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <!-- Graphic Design Projects -->
+            <!-- Project: Headphone Product Design -->
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/head-phones.jpg"
+                  alt="Premium Audio Product Mockup"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Premium Audio Product Mockup</h3>
+                <p class="project-description">
+                  Modern headphone product mockup with sleek design, premium
+                  finishing, and detailed 3D rendering.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/head-phones.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Premium Audio Branding -->
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/premium-sauvage.jpg"
+                  alt="Luxury Fragrance Campaign"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Luxury Fragrance Campaign</h3>
+                <p class="project-description">
+                  Luxury fragrance packaging design with elegant bottle mockup
+                  and sophisticated branding.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/premium-sauvage.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/sauvage-perfume.jpg"
+                  alt="Sauvage Brand Identity"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Sauvage Brand Identity</h3>
+                <p class="project-description">
+                  Complete fragrance packaging design with brand aesthetics,
+                  typography, and visual hierarchy.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/sauvage-perfume.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/dracula-book.jpg"
+                  alt="Gothic Novel Cover Design"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Gothic Novel Cover Design</h3>
+                <p class="project-description">
+                  Professional book cover design with compelling typography,
+                  imagery, and marketable appeal.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/dracula-book.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Horror Novel Branding -->
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/bloody-book.jpg"
+                  alt="Horror Novel Branding"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Horror Novel Branding</h3>
+                <p class="project-description">
+                  Dark and atmospheric book cover design with dramatic
+                  typography and gothic aesthetics.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/bloody-book.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/haloween-burger.jpg"
+                  alt="Seasonal Food Marketing"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Seasonal Food Marketing</h3>
+                <p class="project-description">
+                  Seasonal marketing campaign design for fast food brand with
+                  vibrant colors and playful aesthetics.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/haloween-burger.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/best-burger.jpg"
+                  alt="Gourmet Burger Experience"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Gourmet Burger Experience</h3>
+                <p class="project-description">
+                  Premium restaurant brand design with sophisticated menu
+                  layout, signage, and visual guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/best-burger.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/baytun.png"
+                  alt="Baytun Brand Identity"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Baytun Brand Identity</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/baytun.png')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/sanwitch.png"
+                  alt="Artisan Sandwich Bar"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Artisan Sandwich Bar</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/sanwitch.png')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/ocean-shark.png"
+                  alt="Ocean Shark Adventure"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Ocean Shark Adventure</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/ocean-shark.png')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/mercedes-monster.png"
+                  alt="Mercedes Monster Truck"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Mercedes Monster Truck</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/mercedes-monster.png'), openImageModal(event, './images/designs/mercedes-monster.png')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/transforms.jpg"
+                  alt="Transformers Movie Poster"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Transformers Movie Poster</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/transforms.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="graphic">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/designs/ice-coffe.png"
+                  alt="Iced Coffee Advertising"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Iced Coffee Advertising</h3>
+                <p class="project-description">
+                  Complete brand identity with logo, color palette, and visual
+                  guidelines.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/designs/ice-coffe.png')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- UI/UX Design Projects -->
+            <!-- Project: AI Assistant Interface -->
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/Ai ui-ux.jpg"
+                  alt="AI Assistant Interface"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">AI Assistant Interface</h3>
+                <p class="project-description">
+                  Modern AI chatbot interface with intuitive interactions, clean
+                  typography, and smart design patterns.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/Ai ui-ux.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Creative Studio Dashboard -->
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/aw-studio.jpg"
+                  alt="Creative Studio Dashboard"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Creative Studio Dashboard</h3>
+                <p class="project-description">
+                  Portfolio management dashboard with project showcase,
+                  analytics, and client communication tools.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/aw-studio.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Coffee Shop App -->
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/coffe.jpg"
+                  alt="Coffee Shop App"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Coffee Shop App</h3>
+                <p class="project-description">
+                  Mobile ordering and loyalty app for coffee shops with smooth
+                  ordering flow and gamification.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/coffe.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Luxury Car Configurator -->
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/macluren-1.jpg"
+                  alt="Luxury Car Configurator"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Luxury Car Configurator</h3>
+                <p class="project-description">
+                  Interactive 3D car customization interface with real-time
+                  visualization and detailed specifications.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/macluren-1.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project: Travel Booking Platform -->
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/macluren-2.jpg"
+                  alt="Mobile App Design"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Digital Payment Portal</h3>
+                <p class="project-description">
+                  Secure and intuitive financial transaction interface with
+                  real-time verification and transaction history.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/macluren-2.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <div class="project-card" data-category="uiux">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/ui-ux/macluren-3.jpg"
+                  alt="E-Learning Platform"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Learning Platform</h3>
+                <p class="project-description">
+                  Comprehensive online education interface with course
+                  management, progress tracking, and interactive learning tools.
+                </p>
+              </div>
+              <a
+                href="#"
+                class="project-icon"
+                onclick="openImageModal(event, './images/ui-ux/macluren-3.jpg')"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <!-- Web Projects (React, JavaScript, HTML & CSS) -->
+            <!-- Project 1: Art House E-Commerce -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/web/art-house.png"
+                  alt="Art House E-Commerce"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Art House E-Commerce</h3>
+                <p class="project-description">
+                  Full-featured e-commerce platform built with React for art and
+                  craft products.
+                </p>
+              </div>
+              <a
+                href="https://shahdahmedmahmoud.github.io/Phase-one-project-iti/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 2: Dynamic Platform -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper from-purple/30 to-primary/30">
+                <img
+                  src="./images/web/platform.png"
+                  alt="Dynamic Platform"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Dynamic Platform</h3>
+                <p class="project-description">
+                  Interactive platform with dynamic content management and
+                  real-time updates.
+                </p>
+              </div>
+              <a
+                href="https://lovely-cat-b984cb.netlify.app/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 3: Prayer Times -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/web/paryer-times.png"
+                  alt="Prayer Times"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Prayer Times</h3>
+                <p class="project-description">
+                  Islamic prayer times application with location-based
+                  calculations.
+                </p>
+              </div>
+              <a
+                href="https://ubiquitous-lamington-d3afa6.netlify.app/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 4: Dynamic To-Do List -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-secondary/30 to-primary/30"
+              >
+                <img
+                  src="./images/web/to-do-list.png"
+                  alt="Dynamic To-Do List"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Dynamic To-Do List</h3>
+                <p class="project-description">
+                  Advanced task management app with drag-and-drop and local
+                  storage.
+                </p>
+              </div>
+              <a
+                href="https://superb-empanada-dffcac.netlify.app/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- JavaScript Projects -->
+            <!-- Project 5: Advanced Form -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/web/form.png"
+                  alt="Advanced Form"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Advanced Form</h3>
+                <p class="project-description">
+                  Complex form with validation, error handling, and real-time
+                  feedback.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael12.github.io/my-website-5/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 6: Airline Website -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper from-secondary/30 to-purple/30">
+                <img
+                  src="./images/web/airline-website.png"
+                  alt="Airline Website"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Airline Website</h3>
+                <p class="project-description">
+                  Professional airline booking website with flight search and
+                  reservation.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael-1.github.io/helwan-wings/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 7: E-Commerce Website -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper from-purple/30 to-primary/30">
+                <img
+                  src="./images/web/e-commerce.png"
+                  alt="E-Commerce Website"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Website</h3>
+                <p class="project-description">
+                  Full-featured online store with shopping cart and checkout
+                  process.
+                </p>
+              </div>
+              <a
+                href="https://www.linkedin.com/posts/abdallah-wael-el-saadany-56a215357_webdevelopment-html-css-activity-7369088045955956739-cYMZ"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 8: Hospital Website -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/web/hospital-project.png"
+                  alt="Hospital Website"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Hospital Website</h3>
+                <p class="project-description">
+                  Healthcare facility website with appointment booking and
+                  patient info.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael-1.github.io/Hospital-Project/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 9: Guess The Word Game -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-secondary/30 to-primary/30"
+              >
+                <img
+                  src="./images/web/guess-word.png"
+                  alt="Guess The Word Game"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Guess The Word Game</h3>
+                <p class="project-description">
+                  Interactive word guessing game with difficulty levels and
+                  scoring.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael-1.github.io/Guess-The-Word/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- HTML & CSS Projects -->
+            <!-- Project 10: Food Lover -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/web/food-lover.png"
+                  alt="Food Lover"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Food Lover</h3>
+                <p class="project-description">
+                  Restaurant website showcasing menu, reservations, and food
+                  photography.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael12.github.io/my-web-site-3/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 11: Kasper Website -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-secondary/30 to-primary/30"
+              >
+                <img
+                  src="./images/web/kasper-project.png"
+                  alt="Kasper Website"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Kasper Website</h3>
+                <p class="project-description">
+                  Modern portfolio website with elegant design and smooth
+                  scrolling.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael12.github.io/my-website-2/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 12: Elzero Website -->
+            <div class="project-card" data-category="web">
+              <div class="project-image-wrapper from-purple/30 to-primary/30">
+                <img
+                  src="./images/web/elzero-project.png"
+                  alt="Elzero Website"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Elzero Website</h3>
+                <p class="project-description">
+                  Professional business website with modern layout and
+                  responsive design.
+                </p>
+              </div>
+              <a
+                href="https://abdallah-wael12.github.io/my-web/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Project 13: Advanced Dashboard -->
+            <div class="project-card" data-category="web">
+              <div
+                class="project-image-wrapper from-primary/30 to-secondary/30"
+              >
+                <img
+                  src="./images/web/Dashbord.png"
+                  alt="Advanced Dashboard"
+                  class="project-image"
+                />
+                <div class="project-overlay"></div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Advanced Dashboard</h3>
+                <p class="project-description">
+                  Admin dashboard with data visualization and responsive layout.
+                </p>
+              </div>
+              <a
+                href="https://marwan-wael-1.github.io/Dashboard_1/"
+                target="_blank"
+                class="project-icon"
+              >
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-full">
+      <div class="section-content">
+        <!-- Animated Title -->
+        <div class="section-title-animated">
+          <span>Get in Touch</span>
+        </div>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Content -->
+            <div>
+              <h2 class="section-heading">
+                Let's Work <br /><span class="text-gradient">Together</span>
+              </h2>
+              <p class="section-text mb-10">
+                Have a project in mind or just want to say hello? I'd love to
+                hear from you. Let's create something amazing together.
+              </p>
+
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i data-lucide="mail"></i>
+                  </div>
+                  <div>
+                    <p class="contact-value">aw805224@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i data-lucide="map-pin"></i>
+                  </div>
+                  <div>
+                    <p class="contact-value">Giza, Egypt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Form -->
+            <form action="https://formspree.io/f/xqeeezwr" method="POST">
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Client Inquiry – AW Studio"
+              />
+
+              <input
+                class="form-input"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+
+              <select name="service" class="form-input form-select" required>
+                <option disabled selected>Service Needed</option>
+                <option>UI/UX Design</option>
+                <option>Graphic Design</option>
+                <option>Frontend Development</option>
+              </select>
+              <textarea
+                class="form-input form-textarea"
+                name="message"
+                placeholder="Tell me about your project"
+                required
+              ></textarea>
+
+              <button class="form-submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container px-6 mx-auto max-w-7xl">
+        <div class="footer-wrapper">
+          <!-- Logo & Description -->
+          <div class="footer-brand">
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src="./images/background/logo.jpeg"
+                class="h-12 w-12 rounded-full ring-2 ring-primary/30"
+                alt="AW Logo"
+              />
+              <span class="text-2xl font-bold text-gradient">AW Studio</span>
+            </div>
+            <p class="footer-description">
+              Crafting beautiful digital experiences through design and code.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-list">
+              <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#skills" class="footer-link">Skills</a></li>
+              <li><a href="#projects" class="footer-link">Projects</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-contact">
+            <h3 class="footer-heading">Get in Touch</h3>
+            <ul class="footer-list">
+              <li class="footer-contact-item">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>aw805224@gmail.com</span>
+              </li>
+              <li class="footer-contact-item">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>Giza, Egypt</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="footer-social">
+            <h3 class="footer-heading">Follow Our</h3>
+            <div class="footer-socials">
+              <a
+                href="https://github.com/abdallah-wael-1"
+                target="_blank"
+                class="footer-icon"
+                aria-label="GitHub"
+              >
+                <i data-lucide="github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abdallah-wael-56a215357/"
+                target="_blank"
+                class="footer-icon"
+                aria-label="LinkedIn"
+              >
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/share/1KLjoWa8b2/"
+                target="_blank"
+                class="footer-icon"
+                aria-label="Facebook"
+              >
+                <i data-lucide="facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/aw_studio1?igsh=eDIzNGh6OGpxY3R3"
+                target="_blank"
+                class="footer-icon"
+                aria-label="Instagram"
+              >
+                <i data-lucide="instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@awstudio88?_r=1&_t=ZS-936TRhWbJ0E"
+                target="_blank"
+                class="footer-icon"
+                aria-label="TikTok"
+              >
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.behance.net/ahmedwael3816"
+                target="_blank"
+                class="footer-icon"
+                aria-label="Behance"
+              >
+                <i class="fa-brands fa-behance"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2026 Designed & Developed by
+            <a
+              href="https://www.linkedin.com/in/abdallah-wael-56a215357/"
+              target="_blank"
+              class="footer-author"
+            >
+              Eng: Abdallah Wael
+            </a>
+          </p>
+          <p class="footer-rights">All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeImageModal()">&times;</button>
+        <img id="modalImage" src="" alt="Project Image" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/201100255356"
+      target="_blank"
+      class="floating-whatsapp"
+      aria-label="WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+      lucide.createIcons();
+
+      function openImageModal(event, imageSrc) {
+        event.preventDefault();
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = imageSrc;
+        modal.classList.add("active");
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("active");
+      }
+
+      // Close modal when clicking outside the image
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (event) {
+          if (event.target === this) {
+            closeImageModal();
+          }
+        });
+    </script>
+  </body>
+</html>
